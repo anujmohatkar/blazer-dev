@@ -22,6 +22,7 @@ gem "blazer", path: "../blazer"
 gem "dotenv-rails", groups: [:development, :test]
 gem "faker", groups: [:development]
 gem "letter_opener", group: :development
+gem 'lazy_high_charts'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -32,3 +33,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem 'httparty', '~> 0.20.0'
+gem 'pry', '~> 0.14.1'

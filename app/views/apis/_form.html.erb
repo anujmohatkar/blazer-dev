@@ -1,0 +1,12 @@
+<%= form_with(model: api, remote: true) do |form| %>
+  
+
+  <div>
+    <%= form.label :api, style: "display: block" %>
+    <%= form.text_area :api %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

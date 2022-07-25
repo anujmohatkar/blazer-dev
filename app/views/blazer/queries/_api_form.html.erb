@@ -1,0 +1,7 @@
+<% p "==================================================" %>
+<%= form_with url: Api.last[:api], method: :post, enforce_utf8: false do |form| %>
+  <%= form.label :input, "Api Endpoint" %>
+  <%= form.text_field :input %>
+  <%= form.submit "give result",name: nil%>
+<% end %>
+<% p "==================================================" %>
