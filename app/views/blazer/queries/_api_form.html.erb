@@ -5,3 +5,17 @@
   <%= form.submit "give result",name: nil%>
 <% end %>
 <% p "==================================================" %>
+
+
+<% p "================================================== api response" %>
+<!-- below is the loop to execute the correc -->
+<% api_result = @query.api_call(@query, @rows, @columns) %>
+<% if api_result[0] == 'image' %>
+    <img src=<%= api_result[1] %> class="img-fluid" alt="Responsive image">
+<% elsif api_result[0] == 'table' %>
+    <%= api_result[1] %> <%= api_result[2] %>
+<% elsif api_result[0] == 'chart' %>
+    <%= api_result[1] %> <%= api_result[2] %>
+<% elsif api_result[0] == 'error' %>
+    <%= api_result[1] %>
+<% end %>

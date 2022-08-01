@@ -3,5 +3,7 @@ class Api < ApplicationRecord
       @api_request = HTTParty.get(url)
     end
     
-
+    def guage_value(rows)
+      @guage_value = [rows[0][1]]
+    end
 end
